@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Site Bookmarker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body onload="fetchCategories(); fetchBookmarks(); ">
+
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+
+        </nav>
+        <h3 class="text-muted">Zakładki stron internetowych.</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h2>Stwórz zakładkę swojej ulubionej strony</h2>
+        <form id="myForm">
+            <div class="form-group">
+                <label>Nazwa Strony</label>
+                <input type="text" class="form-control" id="siteName" placeholder="Tu wpisz nazwę zakładki...">
+            </div>
+            <div class="form-group">
+                <label>Adres URL strony.</label>
+                <input type="text" class="form-control" id="siteURL" placeholder="Tu wpisz pełny adres URL strony...">
+            </div>
+            <select id="mySelect">
+                <option value="choose" selected>Wybierz kategorie</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="jumbotron">
+    <form id="add-category">
+        <label>Dodaj kategorie</label>
+        <input type="text" class="form-control" id="category" placeholder="Tu wpisz nazwę nowej kategori...">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+    <form>
+
+    </form>
+    <div class="presenting-way">
+        <button onclick="fetchBookmarks()" type="button" id="all" >Wszystkie zakładki</button>
+        <button onclick="showCategories()" type="button" id="categories">Kategorie</button>
+    </div>
+    <div class="row marketing">
+        <div class="col-lg-12">
+            <div id="bookmarksResults">
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2018 Bookmarker, Jędrzej Zygadło</p>
+    </footer>
+
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
